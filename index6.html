@@ -1,0 +1,26 @@
+<!-- beginAJS -->
+<!DOCTYPE html>
+<html ng-app>
+<head>
+    <title>Listing 4-4</title>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.1/angular.min.js"></script>
+    <script type="text/javascript">
+        function MyFilterDemoCtrl($scope) {
+var someData = {
+firstName: 'JENNA',
+surname: 'GRANT',
+dateJoined: new Date(2010, 2, 23), consumption: 123.659855,
+                plan: 'super-basic-plan',
+                salary: '$60000'
+            };
+            $scope.data = someData;
+} 
+</script>
+</head>
+<body ng-controller="MyFilterDemoCtrl">
+<p>
+Consumption: {{data.consumption }}<br/> Consumption: {{data.consumption | number:2 }}
+Salary: {{ data.salary}}
+</p>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!-- beginAJS -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Listing 4-4</title>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.1/angular.min.js"></script>
+    <script type="text/javascript">
+        function MyFilterDemoCtrl($scope) {
+			var someData = {
+				firstName: 'JENNA',
+				surname: 'GRANT',
+				dateJoined: new Date(2010, 2, 23), 
+				consumption: 123.659855,
+				plan: 'super-basic-plan',
+				salary: '$60000',
+				monthlyUsageHistory:
+                [123.659855,
+                89.645222,
+                97.235644,
+                129.555555,
+                188.699855,
+                65.652545,
+                123.659855,
+                89.645222,
+                97.235644,
+                129.555555,
+                188.699855,
+                65.652545]
+			};
+			$scope.data = someData;
+		} 
+</script>
+</head>
+<body ng-app ng-controller="MyFilterDemoCtrl">
+
+	<p> medium:<strong> {{ data.dateJoined | date:'medium' }} </strong></p>
+	<p>mediumDate: <strong>{{data.dateJoined | date:'mediumDate' }}</strong></p>
+	<p>shortDate: <strong>{{data.dateJoined | date:'shortDate' }}</strong></p>
+
+	<ul><li ng-repeat="gigabytes in data.monthlyUsageHistory | limitTo:-5"> {{gigabytes | number:2}}</li></ul>
+</body>
+</html>

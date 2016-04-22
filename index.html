@@ -1,0 +1,16 @@
+<!-- beginAJS -->
+<!DOCTYPE html>
+<html ng-app="myAppModule">
+<head lang="en">
+	<meta charset="UTF-8">
+    <title>Listing 4-10</title>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.1/angular.min.js"></script>
+    <script type="text/javascript" src="js/myAppModule.js"> </script>
+    <!--script type="text/javascript">
+
+    </script -->    
+</head>
+<body data:ng-controller="MyFilterDemoCtrl">
+	<p>First name: {{data.plan | stripDashes | toTitleCase}} </p>
+</body>
+</html>
