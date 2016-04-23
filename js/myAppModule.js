@@ -13,7 +13,7 @@ myAppModule.filter("toTitleCase", function () {
     };
 });
 
-/*
+
 myAppModule.controller('MyFilterDemoCtrl', function($scope){
 		//controller code would go here
 		var someData = {
@@ -26,7 +26,7 @@ myAppModule.controller('MyFilterDemoCtrl', function($scope){
         $scope.data=someData;
 	}
 );
-*/
+
 myAppModule.controller('myProductDetailCtrl', function($scope){
 		//controller code would go here
 		$scope.isHidden = true;
